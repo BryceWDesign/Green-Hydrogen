@@ -1,0 +1,38 @@
+Green-Hydrogen
+Copyright 2026 Bryce Lovell
+
+This repository is an original synthesis and planning scaffold for a measurement-first
+solar-assisted green-hydrogen validation platform. It preserves current design
+knowledge from the project: water verification, Gankyil vortex phase management,
+baseline electrolysis, solar thermal assist, plasma/redox/PEC research branches,
+safety-gated control, and evidence receipts.
+
+This repository does not contain physical proof of green hydrogen production.
+
+Claim boundary:
+- This is not flight hardware.
+- This is not commercial hydrogen equipment.
+- This is not a certified pressure system.
+- This is not a claim of net-positive green hydrogen production.
+- This is not a claim of safe gas production without external validation.
+- This is not a substitute for codes, standards, certified hardware, or trained supervision.
+
+Any claim of green hydrogen production requires measured evidence:
+- hydrogen output rate,
+- gas purity,
+- oxygen crossover,
+- water input and water quality,
+- electrical input,
+- thermal input,
+- renewable energy traceability,
+- carbon-intensity accounting,
+- leakage checks,
+- sensor calibration records,
+- degradation data,
+- repeatability data,
+- and safety-gate records.
+
+The repository is intended to support bounded research, documentation, simulation,
+bench planning, and validation design. Physical implementation must use compliant
+components, proper ventilation, no ignition sources, trained oversight, and applicable
+local codes and safety standards.
