@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/green-hydrogen/run_intent.schema.json",
+  "title": "Green-Hydrogen Run Intent",
+  "description": "Run intent schema for a bounded Green-Hydrogen validation run.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "run_id",
+    "branch",
+    "objective",
+    "operator",
+    "run_duration_limit",
+    "gas_path_mode",
+    "safety_notes"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "description": "Stable unique run identifier."
+    },
+    "branch": {
+      "type": "string",
+      "enum": [
+        "baseline",
+        "gankyil_a",
+        "solar_electrical",
+        "solar_thermal_assist",
+        "plasma_catalyst",
+        "pec",
+        "redox",
+        "hybrid_future"
+      ]
+    },
+    "objective": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "water_source": {
+      "type": "string"
+    },
+    "power_source": {
+      "type": "string"
+    },
+    "run_duration_limit": {
+      "type": "string"
+    },
+    "gas_path_mode": {
+      "type": "string",
+      "enum": [
+        "baseline_separator",
+        "gankyil_a",
+        "solar_traceability",
+        "thermal_assist",
+        "advanced_branch",
+        "unknown"
+      ]
+    },
+    "sensors_expected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety_notes": {
+      "type": "string"
+    },
+    "pressure_storage_requested": {
+      "type": "boolean",
+      "default": false
+    },
+    "flame_test_requested": {
+      "type": "boolean",
+      "default": false
+    },
+    "baseline_run_reference": {
+      "type": "string"
+    },
+    "comparison_plan": {
+      "type": "string"
+    },
+    "non_pressurized_confirmed": {
+      "type": "boolean"
+    },
+    "production_claim_requested": {
+      "type": "boolean",
+      "default": false
+    },
+    "advanced_branch_review_approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "separate_test_article": {
+      "type": "boolean",
+      "default": false
+    },
+    "no_shared_claim_with_baseline": {
+      "type": "boolean",
+      "default": false
+    },
+    "emi_control_record_present": {
+      "type": "boolean",
+      "default": false
+    },
+    "high_voltage_safety_review_present": {
+      "type": "boolean",
+      "default": false
+    },
+    "byproduct_review_present": {
+      "type": "boolean",
+      "default": false
+    },
+    "operator_review_present": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
