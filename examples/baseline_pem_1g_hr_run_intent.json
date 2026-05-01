@@ -1,0 +1,20 @@
+{
+  "run_id": "GH-A0-YYYYMMDD-001",
+  "branch": "baseline",
+  "objective": "Dry example intent for a conservative baseline hydrogen-specific detection run. The filename references a nominal planning target only; it is not a verified production claim.",
+  "operator": "example_operator",
+  "water_source": "documented_water_source_required_before_physical_run",
+  "power_source": "current_limited_dc_bench_supply",
+  "run_duration_limit": "bounded_short_duration_defined_before_physical_run",
+  "gas_path_mode": "baseline_separator",
+  "sensors_expected": [
+    "hydrogen_specific_detector",
+    "power_meter",
+    "water_temperature",
+    "ph_or_tds_method"
+  ],
+  "safety_notes": "Dry example only. No pressure storage, no sealed accumulation, no flame test, no advanced branch.",
+  "pressure_storage_requested": false,
+  "flame_test_requested": false,
+  "production_claim_requested": false
+}
