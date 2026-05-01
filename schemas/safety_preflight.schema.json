@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/green-hydrogen/safety_preflight.schema.json",
+  "title": "Green-Hydrogen Safety Preflight",
+  "description": "Safety preflight schema for GH-BENCH-A0. All required safety fields must be explicitly true before a physical run.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "operator_present",
+    "ventilation_present",
+    "no_pressure_storage",
+    "no_sealed_accumulation",
+    "no_ignition_sources",
+    "emergency_disconnect_present",
+    "leak_check_passed",
+    "water_electric_separation_confirmed",
+    "sensors_connected",
+    "sensor_wetness_protection_confirmed",
+    "gas_path_documented",
+    "vent_path_defined",
+    "branch_selected",
+    "run_duration_bounded",
+    "prior_anomalies_resolved",
+    "evidence_forms_ready"
+  ],
+  "properties": {
+    "operator_present": {
+      "type": "boolean",
+      "const": true
+    },
+    "ventilation_present": {
+      "type": "boolean",
+      "const": true
+    },
+    "no_pressure_storage": {
+      "type": "boolean",
+      "const": true
+    },
+    "no_sealed_accumulation": {
+      "type": "boolean",
+      "const": true
+    },
+    "no_ignition_sources": {
+      "type": "boolean",
+      "const": true
+    },
+    "emergency_disconnect_present": {
+      "type": "boolean",
+      "const": true
+    },
+    "leak_check_passed": {
+      "type": "boolean",
+      "const": true
+    },
+    "water_electric_separation_confirmed": {
+      "type": "boolean",
+      "const": true
+    },
+    "sensors_connected": {
+      "type": "boolean",
+      "const": true
+    },
+    "sensor_wetness_protection_confirmed": {
+      "type": "boolean",
+      "const": true
+    },
+    "gas_path_documented": {
+      "type": "boolean",
+      "const": true
+    },
+    "vent_path_defined": {
+      "type": "boolean",
+      "const": true
+    },
+    "branch_selected": {
+      "type": "string",
+      "enum": [
+        "baseline",
+        "gankyil_a",
+        "solar_electrical",
+        "solar_thermal_assist",
+        "plasma_catalyst",
+        "pec",
+        "redox",
+        "hybrid_future"
+      ]
+    },
+    "run_duration_bounded": {
+      "type": "boolean",
+      "const": true
+    },
+    "prior_anomalies_resolved": {
+      "type": "boolean",
+      "const": true
+    },
+    "evidence_forms_ready": {
+      "type": "boolean",
+      "const": true
+    },
+    "sensor_wetness_observed": {
+      "type": "boolean",
+      "default": false
+    },
+    "pressure_storage_present": {
+      "type": "boolean",
+      "default": false
+    },
+    "flame_test_present": {
+      "type": "boolean",
+      "default": false
+    },
+    "advanced_branch_requested": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
