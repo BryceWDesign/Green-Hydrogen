@@ -1,0 +1,23 @@
+{
+  "run_id": "GH-COMP-YYYYMMDD-001",
+  "branch": "gankyil_a",
+  "objective": "Compare Gankyil-A passive phase-management behavior against the baseline separator path under bounded GH-BENCH-A0 conditions.",
+  "operator": "example_operator",
+  "baseline_run_reference": "GH-A0-YYYYMMDD-001",
+  "comparison_plan": "A-side baseline separator path versus B-side Gankyil-A phase-management path with comparable water, power, duration, sensor placement, and venting.",
+  "water_source": "same_as_baseline_or_documented_difference",
+  "power_source": "same_current_limited_dc_bench_supply_as_baseline",
+  "run_duration_limit": "same_as_baseline_or_documented_difference",
+  "gas_path_mode": "gankyil_a",
+  "sensors_expected": [
+    "hydrogen_specific_detector",
+    "liquid_carryover_observation",
+    "sensor_wetness_observation",
+    "gas_path_stability_observation"
+  ],
+  "safety_notes": "Gankyil-A is non-pressurized, removable, and used only for bounded phase-management comparison.",
+  "non_pressurized_confirmed": true,
+  "pressure_storage_requested": false,
+  "flame_test_requested": false,
+  "production_claim_requested": false
+}
