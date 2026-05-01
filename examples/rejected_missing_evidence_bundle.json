@@ -1,0 +1,57 @@
+{
+  "branch": "baseline",
+  "run_started": true,
+  "run_completed": false,
+  "run_intent": {
+    "run_id": "GH-A0-YYYYMMDD-REJECTED-001",
+    "branch": "baseline",
+    "objective": "Rejected dry example showing that missing evidence cannot support a hydrogen claim.",
+    "operator": "example_operator",
+    "run_duration_limit": "bounded",
+    "gas_path_mode": "baseline_separator",
+    "safety_notes": "Dry rejected example."
+  },
+  "safety_preflight": {
+    "passed": true,
+    "status": "pass"
+  },
+  "water_record": {
+    "water_source": "documented_example_water",
+    "water_volume": "unknown",
+    "water_temperature": "unknown",
+    "water_ph": "unknown",
+    "water_tds_or_conductivity": "unknown",
+    "visible_clarity": "unknown"
+  },
+  "power_record": {},
+  "gas_record": {
+    "visual_bubbles_observed": true,
+    "hydrogen_specific_detection_present": false,
+    "sensor_wetness_observed": false,
+    "leak_check_result": "unknown",
+    "vent_path_defined": false
+  },
+  "carbon_record": {
+    "source_type": "unknown",
+    "source_description": "unknown",
+    "energy_wh": "unknown",
+    "renewable_fraction": "unknown",
+    "battery_used": false,
+    "solar_used": false,
+    "thermal_assist_used": false,
+    "carbon_assumption_note": "Unknown source cannot support green-hydrogen claim."
+  },
+  "receipt": {
+    "claim_status": "blocked_by_missing_evidence"
+  },
+  "acceptance": {
+    "accepted": false,
+    "status": "blocked_by_missing_evidence",
+    "reasons": [
+      "power_record is missing",
+      "hydrogen-specific detection is missing",
+      "visual bubbles are not hydrogen proof"
+    ]
+  },
+  "notes": "This example should remain rejected. It exists to prove the acceptance layer fails closed."
+}
