@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/green-hydrogen/evidence_bundle.schema.json",
+  "title": "Green-Hydrogen Evidence Bundle",
+  "description": "Evidence bundle schema for baseline Green-Hydrogen validation.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "branch",
+    "run_intent",
+    "safety_preflight",
+    "water_record",
+    "power_record",
+    "gas_record",
+    "carbon_record",
+    "receipt",
+    "acceptance",
+    "notes"
+  ],
+  "properties": {
+    "branch": {
+      "type": "string",
+      "enum": [
+        "baseline",
+        "gankyil_a",
+        "solar_electrical",
+        "solar_thermal_assist",
+        "plasma_catalyst",
+        "pec",
+        "redox",
+        "hybrid_future"
+      ]
+    },
+    "run_started": {
+      "type": "boolean"
+    },
+    "run_completed": {
+      "type": "boolean"
+    },
+    "run_intent": {
+      "type": "object"
+    },
+    "safety_preflight": {
+      "type": "object"
+    },
+    "water_record": {
+      "type": "object",
+      "required": [
+        "water_source",
+        "water_volume",
+        "water_temperature",
+        "water_ph",
+        "water_tds_or_conductivity",
+        "visible_clarity"
+      ],
+      "properties": {
+        "water_source": {
+          "type": "string"
+        },
+        "water_volume": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "water_temperature": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "water_ph": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "water_tds_or_conductivity": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "visible_clarity": {
+          "type": "string"
+        },
+        "electrolyte_used": {
+          "type": [
+            "boolean",
+            "string"
+          ]
+        },
+        "electrolyte_source_or_spec": {
+          "type": "string"
+        }
+      }
+    },
+    "power_record": {
+      "type": "object",
+      "required": [
+        "source_type",
+        "source_description",
+        "voltage_v",
+        "current_a",
+        "duration_s",
+        "energy_wh",
+        "current_limit_a",
+        "fuse_or_protection",
+        "emergency_disconnect_confirmed",
+        "instrument_used"
+      ]
+    },
+    "gas_record": {
+      "type": "object",
+      "required": [
+        "gas_path_mode",
+        "upstream_source",
+        "hydrogen_sensor_model",
+        "hydrogen_sensor_calibration_state",
+        "hydrogen_sensor_initial_state",
+        "hydrogen_sensor_final_state",
+        "liquid_protection_present",
+        "sensor_wetness_observed",
+        "oxygen_observation_method",
+        "vent_path_defined",
+        "leak_check_result"
+      ]
+    },
+    "carbon_record": {
+      "type": "object",
+      "required": [
+        "source_type",
+        "source_description",
+        "energy_wh",
+        "renewable_fraction",
+        "battery_used",
+        "solar_used",
+        "thermal_assist_used",
+        "carbon_assumption_note"
+      ]
+    },
+    "receipt": {
+      "type": "object"
+    },
+    "acceptance": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "setup_photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
